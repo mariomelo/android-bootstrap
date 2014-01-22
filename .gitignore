@@ -22,3 +22,7 @@ out
 classes
 app/build
 app/.gradle
+build
+.gradle
+local.properties
+app/local.properties

@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 17
+        targetSdkVersion 19
     }
 }
 
@@ -30,7 +30,7 @@ dependencies {
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile 'com.viewpagerindicator:library:2.4.1@aar'    
     
-    compile 'net.simonvt:android-menudrawer:3.0.0'
+    compile 'net.simonvt.menudrawer:menudrawer:3.0.5'
     compile 'com.google.android:android:4.1.1.4'
     compile 'com.google.android:support-v4:r7'
     
@@ -52,16 +52,16 @@ dependencies {
 android {
     sourceSets {
         main {
-            manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            resources.srcDirs = ['src']
-            aidl.srcDirs = ['src']
-            renderscript.srcDirs = ['src']
-            res.srcDirs = ['res']
-            assets.srcDirs = ['assets']
+            manifest.srcFile 'app/AndroidManifest.xml'
+            java.srcDirs = ['app/src']
+            resources.srcDirs = ['app/src']
+            aidl.srcDirs = ['app/src']
+            renderscript.srcDirs = ['app/src']
+            res.srcDirs = ['app/res']
+            assets.srcDirs = ['app/assets']
         }
 
-        instrumentTest.setRoot('tests')
+        instrumentTest.setRoot('integration-tests')
     }
 }
 
